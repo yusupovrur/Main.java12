@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
+
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -30,7 +30,7 @@ public class Main {
 
                 }
                 for (Map.Entry<String, Integer> entry : wordsFrequency.entrySet()) {
-                    System.out.printf("Слово %s встречается %d раз\n", entry.getKey(), +entry.getValue());
+                    System.out.printf("РЎР»РѕРІРѕ %s РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ %d СЂР°Р·\n", entry.getKey(), +entry.getValue());
 
                 }
             }
@@ -40,7 +40,7 @@ public class Main {
         }
         try (FileWriter fileWriter = new FileWriter("result.txt")) {
             for (Map.Entry<String, Integer> entry : wordsFrequency.entrySet()) {
-                String s = String.format("Слово %s встречается %d раз\n", entry.getKey(), +entry.getValue());
+                String s = String.format("РЎР»РѕРІРѕ %s РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ %d СЂР°Р·\n", entry.getKey(), +entry.getValue());
                 fileWriter.write(s);
             }
             String maxKey = "";
@@ -52,9 +52,9 @@ public class Main {
                     maxValue = entry.getValue();
                 }
             }
-            String a = String.format("Слово \"%s\" чаще всего встречается в тексте (%d раз(а)) ", maxKey, maxValue);
+            String a = String.format("РЎР»РѕРІРѕ \"%s\" С‡Р°С‰Рµ РІСЃРµРіРѕ РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ РІ С‚РµРєСЃС‚Рµ (%d СЂР°Р·(Р°)) ", maxKey, maxValue);
             fileWriter.write(a);
-
+//СѓРєС†СѓРєС†СѓРєС†СѓРєС†СѓРєС†СѓРєС†СѓРєС†СѓРє
 
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
