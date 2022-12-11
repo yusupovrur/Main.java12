@@ -54,7 +54,7 @@ public class Main {
             }
             String a = String.format("Слово \"%s\" чаще всего встречается в тексте (%d раз(а)) ", maxKey, maxValue);
             fileWriter.write(a);
-//укцукцукцукцукцукцукцук
+
 
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
